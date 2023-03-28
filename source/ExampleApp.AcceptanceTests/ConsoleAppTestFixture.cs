@@ -11,7 +11,7 @@ namespace ExampleApp.AcceptanceTests
 
         protected string? StdErr { get; private set; }
 
-        protected string Actual => $"{StdOut}{StdErr}";
+        protected string Actual => $"{StdOut}{StdErr}".Trim();
 
         protected bool StartApplicationUnderTest(string appName, string appArgs)
         {
@@ -33,6 +33,8 @@ namespace ExampleApp.AcceptanceTests
             
             StdOut = process?.StandardOutput.ReadToEnd();
             StdErr = process?.StandardError.ReadToEnd();
+
+            Console.WriteLine(Actual);
 
             process?.WaitForExit(1000);
 
