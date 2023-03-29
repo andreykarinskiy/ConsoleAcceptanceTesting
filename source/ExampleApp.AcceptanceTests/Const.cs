@@ -1,17 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExampleApp.AcceptanceTests
+﻿namespace ExampleApp.AcceptanceTests
 {
+    /// <summary>
+    /// Global constants of test set.
+    /// </summary>
     public static class Const
     {
+        /// <summary>
+        /// Application under test file name (with extension).
+        /// </summary>
         public const string AppFile = "ExampleApp.exe";
 
-        public const string PublishDir = "../../../../ExampleApp/publish/";
+        /// <summary>
+        /// Application under test publishing path.
+        /// </summary>
+        public const string PublishingDir = "../../../../ExampleApp/publish/";
 
-        public const string ApplicationUnderTest = PublishDir + AppFile;
+        /// <summary>
+        /// Application under test full file name.
+        /// </summary>
+        public const string ApplicationUnderTest = PublishingDir + AppFile;
     }
 }
