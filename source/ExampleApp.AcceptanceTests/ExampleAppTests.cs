@@ -8,12 +8,14 @@ namespace ExampleApp.AcceptanceTests
     [DeploymentItem(Const.ApplicationUnderTest)]
     public class ExampleAppTests : ConsoleAppTestFixture
     {
+        protected override string AppName => Const.ApplicationUnderTest;
+
         [DataTestMethod]
         [DataRow("command=help", "Command executed: command=help")]
-        public void RunWithArgs(string args, string expected)
+        public void RunWithArgs(string appArgs, string expected)
         {
             // Arrange, Act
-            StartApplicationUnderTest(Const.ApplicationUnderTest, args);
+            StartApplicationUnderTest(appArgs);
 
             // Assert
             Actual.Should().Be(expected);
