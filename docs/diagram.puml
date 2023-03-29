@@ -1,0 +1,16 @@
+@startuml
+skinparam component {
+    BackgroundColor<<UnderTest>> lightyellow
+}
+
+component ConsoleApp <<UnderTest>> {
+}
+
+class AcceptanceTest {
+  #AppName : string
+  +Actual : string
+  +RunWithArgs(args, expected)
+}
+
+AcceptanceTest .up.> ConsoleApp : <<instantiate>>
+@enduml
