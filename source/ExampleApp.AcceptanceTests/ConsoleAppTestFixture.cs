@@ -33,7 +33,7 @@ namespace ExampleApp.AcceptanceTests
         /// A textual representation of the result of executing a console application. 
         /// Assembled from StdOut and StdErr (if used).
         /// </summary>
-        protected string Actual => $"{StdOut}{StdErr}".Trim();
+        protected string ConsoleOutput => $"{StdOut}{StdErr}".Trim();
 
         /// <summary>
         /// The method that starts the application under test. 
@@ -71,7 +71,7 @@ namespace ExampleApp.AcceptanceTests
             StdOut = process?.StandardOutput.ReadToEnd();
             StdErr = process?.StandardError.ReadToEnd();
 
-            Console.WriteLine(Actual);
+            Console.WriteLine(ConsoleOutput);
 
             process?.WaitForExit(1000);
             

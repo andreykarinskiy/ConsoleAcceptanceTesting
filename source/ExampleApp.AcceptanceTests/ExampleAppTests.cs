@@ -18,7 +18,7 @@ namespace ExampleApp.AcceptanceTests
             StartApplicationUnderTest(appArgs);
 
             // Assert
-            Actual.Should().Be(expected);
+            ConsoleOutput.Should().Be(expected);
         }
     }
 }
