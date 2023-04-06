@@ -15,7 +15,7 @@ namespace ExampleApp.AcceptanceTests
         public void RunWithArgs(string appArgs, string expected)
         {
             // Arrange, Act
-            StartApplicationUnderTest(appArgs);
+            RunApplicationUnderTest(appArgs);
 
             // Assert
             ConsoleOutput.Should().Be(expected);

@@ -41,7 +41,7 @@ namespace ExampleApp.AcceptanceTests
         /// </summary>
         /// <param name="appArgs">Input parameters</param>
         /// <returns>Success?</returns>
-        protected bool StartApplicationUnderTest(string appArgs) => StartApplicationUnderTest(AppName, appArgs);
+        protected bool RunApplicationUnderTest(string appArgs) => StartApplicationUnderTest(AppName, appArgs);
 
         /// <summary>
         /// The method that starts the application under test. 
