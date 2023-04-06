@@ -8,7 +8,7 @@ component ConsoleApp <<UnderTest>> {
 
 class AcceptanceTest {
   #AppName : string
-  +Actual : string
+  +ConsoleOutput : string
   +RunWithArgs(args, expected)
 }
 
